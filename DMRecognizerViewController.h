@@ -57,7 +57,6 @@
 @property(nonatomic,retain) UILabel *wordToSay;
 @property(nonatomic,retain) UILabel *wordSayResult;
 
-
 - (IBAction)recordButtonAction: (id)sender;
 - (IBAction)serverUpdateButtonAction: (id)sender;
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A611FDF21A8C472A00B19ED9 /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = A611FDF11A8C472A00B19ED9 /* data.swift */; };
+		A611FDF51A8C4C5600B19ED9 /* NSArray+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = A611FDF41A8C4C5600B19ED9 /* NSArray+Random.m */; };
 		A65466BE1A8993050029E9FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A65466BD1A8993050029E9FA /* main.m */; };
 		A65466C11A8993060029E9FA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A65466C01A8993060029E9FA /* AppDelegate.m */; };
 		A65466C41A8993060029E9FA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A65466C31A8993060029E9FA /* ViewController.m */; };
@@ -38,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A611FDF01A8C472900B19ED9 /* SpeakerTeacherNewImportAll-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpeakerTeacherNewImportAll-Bridging-Header.h"; sourceTree = "<group>"; };
+		A611FDF11A8C472A00B19ED9 /* data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = data.swift; path = ../data.swift; sourceTree = "<group>"; };
+		A611FDF31A8C4C3E00B19ED9 /* NSArray+Random.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+Random.h"; sourceTree = "<group>"; };
+		A611FDF41A8C4C5600B19ED9 /* NSArray+Random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Random.m"; sourceTree = "<group>"; };
 		A65466B81A8993050029E9FA /* SpeakerTeacherNewImportAll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeakerTeacherNewImportAll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A65466BC1A8993050029E9FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A65466BD1A8993050029E9FA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -60,8 +66,8 @@
 		A65466E71A8993250029E9FA /* SpeechKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpeechKit.framework; path = ../SpeakerTeacherRecog/SpeechKit.framework; sourceTree = "<group>"; };
 		A65466E81A8993250029E9FA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A65466E91A8993250029E9FA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		A65466F31A8993630029E9FA /* DMRecognizerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMRecognizerViewController.h; sourceTree = "<group>"; };
-		A65466F41A8993630029E9FA /* DMRecognizerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMRecognizerViewController.m; sourceTree = "<group>"; };
+		A65466F31A8993630029E9FA /* DMRecognizerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DMRecognizerViewController.h; path = ../DMRecognizerViewController.h; sourceTree = "<group>"; };
+		A65466F41A8993630029E9FA /* DMRecognizerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DMRecognizerViewController.m; path = ../DMRecognizerViewController.m; sourceTree = "<group>"; };
 		A65466F61A8993980029E9FA /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,8 +101,6 @@
 		A65466AF1A8993050029E9FA = {
 			isa = PBXGroup;
 			children = (
-				A65466F31A8993630029E9FA /* DMRecognizerViewController.h */,
-				A65466F41A8993630029E9FA /* DMRecognizerViewController.m */,
 				A65466E11A8993250029E9FA /* AudioToolbox.framework */,
 				A65466E21A8993250029E9FA /* AVFoundation.framework */,
 				A65466E31A8993250029E9FA /* CFNetwork.framework */,
@@ -109,6 +113,7 @@
 				A65466BA1A8993050029E9FA /* SpeakerTeacherNewImportAll */,
 				A65466D41A8993060029E9FA /* SpeakerTeacherNewImportAllTests */,
 				A65466B91A8993050029E9FA /* Products */,
+				A611FDF01A8C472900B19ED9 /* SpeakerTeacherNewImportAll-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,6 +129,11 @@
 		A65466BA1A8993050029E9FA /* SpeakerTeacherNewImportAll */ = {
 			isa = PBXGroup;
 			children = (
+				A611FDF11A8C472A00B19ED9 /* data.swift */,
+				A65466F31A8993630029E9FA /* DMRecognizerViewController.h */,
+				A65466F41A8993630029E9FA /* DMRecognizerViewController.m */,
+				A611FDF31A8C4C3E00B19ED9 /* NSArray+Random.h */,
+				A611FDF41A8C4C5600B19ED9 /* NSArray+Random.m */,
 				A65466F61A8993980029E9FA /* MainWindow.xib */,
 				A65466BF1A8993050029E9FA /* AppDelegate.h */,
 				A65466C01A8993060029E9FA /* AppDelegate.m */,
@@ -267,6 +277,8 @@
 				A65466C41A8993060029E9FA /* ViewController.m in Sources */,
 				A65466C11A8993060029E9FA /* AppDelegate.m in Sources */,
 				A65466BE1A8993050029E9FA /* main.m in Sources */,
+				A611FDF51A8C4C5600B19ED9 /* NSArray+Random.m in Sources */,
+				A611FDF21A8C472A00B19ED9 /* data.swift in Sources */,
 				A65466F51A8993630029E9FA /* DMRecognizerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,6 +403,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/jesseangelo/Documents/Development/SpeakerTeacherRecog,
@@ -398,6 +411,8 @@
 				INFOPLIST_FILE = SpeakerTeacherNewImportAll/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SpeakerTeacherNewImportAll-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -405,6 +420,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/jesseangelo/Documents/Development/SpeakerTeacherRecog,
@@ -412,6 +428,7 @@
 				INFOPLIST_FILE = SpeakerTeacherNewImportAll/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SpeakerTeacherNewImportAll-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -468,6 +485,7 @@
 				A65466DD1A8993060029E9FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A65466DE1A8993060029E9FA /* Build configuration list for PBXNativeTarget "SpeakerTeacherNewImportAllTests" */ = {
 			isa = XCConfigurationList;
@@ -476,6 +494,7 @@
 				A65466E01A8993060029E9FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

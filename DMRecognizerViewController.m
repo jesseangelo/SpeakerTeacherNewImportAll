@@ -1,4 +1,5 @@
 #import "DMRecognizerViewController.h"
+#import "NSArray+Random.h"
 
 /**
  * The login parameters should be specified in the following manner:
@@ -6,6 +7,8 @@
 const unsigned char SpeechKitApplicationKey[] = {0x37, 0xcf, 0xfb, 0x3e, 0x71, 0xfc, 0x18, 0x58, 0x3d, 0x2b, 0xda, 0xc8, 0x56, 0x90, 0xf5, 0x9c, 0x48, 0x7a, 0xb3, 0x7c, 0x02, 0x7b, 0xb7, 0x06, 0xac, 0xb1, 0x11, 0x2d, 0x9f, 0xf6, 0x1b, 0xd6, 0xc5, 0x16, 0x14, 0x36, 0x13, 0x2c, 0x8e, 0x50, 0x57, 0x69, 0x19, 0xae, 0xf9, 0x0e, 0x4a, 0x41, 0x88, 0xfd, 0xbd, 0x8a, 0x79, 0x75, 0x90, 0x25, 0x26, 0xa1, 0x52, 0xc5, 0x97, 0x6d, 0x9b, 0x5c };
 
 @implementation DMRecognizerViewController
+NSArray *data = nil;
+NSString *answerKey;
 @synthesize recordButton,searchBox,serverBox,portBox,alternativesDisplay,vuMeter,voiceSearch,wordToSay,wordSayResult;
 
 /*
@@ -34,8 +37,10 @@ const unsigned char SpeechKitApplicationKey[] = {0x37, 0xcf, 0xfb, 0x3e, 0x71, 0
                       port:443
                     useSSL:NO
                   delegate:self];
-    
+    data = [NSArray arrayWithObjects:@"Square", @"Circle", @"Triangle", @"Rectangle", @"Red", @"Blue", @"Green", nil];
     [self getWordToSay];
+    
+    
 	// Set earcons to play
 	//SKEarcon* earconStart	= [SKEarcon earconWithName:@"earcon_listening.wav"];
 	//SKEarcon* earconStop	= [SKEarcon earconWithName:@"earcon_done_listening.wav"];
@@ -54,7 +59,9 @@ const unsigned char SpeechKitApplicationKey[] = {0x37, 0xcf, 0xfb, 0x3e, 0x71, 0
 
 
 - (void)getWordToSay {
-    wordToSay.text = @"test";
+    answerKey = [data randomObject];
+    wordToSay.text = answerKey;
+    //wordToSay.text = @"test";
 }
      
 /*
@@ -256,14 +263,13 @@ const unsigned char SpeechKitApplicationKey[] = {0x37, 0xcf, 0xfb, 0x3e, 0x71, 0
         
     }
     
-    NSString *t = @"School";
-    
-    if ([[results firstResult] isEqualToString:t]) {
+    if ([[results firstResult] isEqualToString:answerKey]) {
         wordSayResult.text = @"YES!";
     } else {
         wordSayResult.text = @"no..";
     }
     
+    [self getWordToSay];
 	//[voiceSearch release];
 	voiceSearch = nil;
 }
